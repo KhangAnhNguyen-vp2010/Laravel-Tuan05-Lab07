@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,3 +21,5 @@ Route::get('/articles', fn() => 'Quản trị bài viết')
 ->name('admin.articles.index');
 
 });
+
+Route::resource('articles', ArticleController::class);
