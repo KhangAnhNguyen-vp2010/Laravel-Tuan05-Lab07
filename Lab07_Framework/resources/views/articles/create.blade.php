@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Tạo bài viết')
+@include('includes.breadcrumb')
 @section('content')
 <h2>Tạo bài viết</h2>
 <x-alert type="warning" title="Lưu ý">Dữ liệu hiện chỉ mô phỏng (chưa lưu

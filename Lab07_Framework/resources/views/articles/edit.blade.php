@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Sửa bài viết')
+@include('includes.breadcrumb')
 @section('content')
 <h2>Sửa bài viết #{{ $article['id'] }}</h2>
 <form action="{{ route('articles.update',$article['id']) }}" method="post">

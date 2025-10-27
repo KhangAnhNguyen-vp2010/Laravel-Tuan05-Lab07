@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title','Danh sách bài viết')
 @section('content')
+@include('includes.breadcrumb')
 <h2>Danh sách bài viết</h2>
 <table>
 <thead>
