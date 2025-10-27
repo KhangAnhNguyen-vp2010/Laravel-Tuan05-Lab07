@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Article;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,4 +23,9 @@ Route::get('/articles', fn() => 'Quản trị bài viết')
 
 });
 
+Route::get('/articles/show/{article}', function (Article $article) {
+    return view('article', ['article' => $article]);
+});
+
 Route::resource('articles', ArticleController::class);
+
