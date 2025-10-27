@@ -6,7 +6,7 @@ cd Lab07_Framework
 
 composer install
 
-copy .env.example .env
+copy .env.example .env (đổi port mysql theo .env)
 
 php artisan key:generate
 
