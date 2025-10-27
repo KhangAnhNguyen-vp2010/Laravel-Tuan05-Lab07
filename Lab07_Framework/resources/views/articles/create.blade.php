@@ -15,4 +15,22 @@ solid #e5e7eb;border-radius:6px">{{ old('body') }}</textarea>
 @enderror
 <button type="submit" style="margin-top:10px">Lưu</button>
 </form>
+
+@push('styles')
+<style>
+    form {
+        background: #f9fafb;
+        padding: 15px;
+        border-radius: 8px;
+        max-width: 500px;
+    }
+    input, textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+    }
+</style>
+@endpush
 @endsection

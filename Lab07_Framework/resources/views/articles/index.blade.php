@@ -12,12 +12,16 @@
 <td>{{ $a['id'] }}</td>
 <td>{{ $a['title'] }}</td>
 <td>
-<a href="{{ route('articles.show',$a['id']) }}">Xem</a> |
-<a href="{{ route('articles.edit',$a['id']) }}">Sửa</a> |
+<a href="{{ route('articles.show',$a['id']) }}">
+    <x-button variant="primary">Xem</x-button>
+</a>
+<a href="{{ route('articles.edit',$a['id']) }}">
+    <x-button variant="primary">Sửa</x-button>
+</a>
 <form action="{{ route('articles.destroy', $a['id']) }}" method="post" style="display:inline" class="delete-form">
     @csrf
     @method('DELETE')
-    <button type="submit">Xoá</button>
+    <x-button variant="primary">Xoá</x-button>
 </form>
 
 </td>
